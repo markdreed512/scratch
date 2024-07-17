@@ -1,1 +1,38 @@
-<h1>Test123</h1>
+<!-- deployed at https://scratch-lime.vercel.app/ -->
+<!-- vercel.com -->
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />  
+</head>
+<body>
+    <div>
+        <a
+           data-fancybox="gallery"
+           data-src="https://lipsum.app/id/2/1024x768"
+           data-caption="Optional caption,&lt;br /&gt;that can contain &lt;em&gt;HTML&lt;/em&gt; code"
+           >
+          <img src="https://lipsum.app/id/2/200x150" />
+        </a>
+  
+        <a data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+          <img src="https://lipsum.app/id/3/200x150" />
+        </a>
+  
+        <a data-fancybox="gallery" data-src="https://lipsum.app/id/4/1024x768">
+          <img src="https://lipsum.app/id/4/200x150" />
+        </a>
+      </div>
+
+      <script>
+        Fancybox.bind('[data-fancybox="gallery"]', {
+          //
+        });    
+  
+  
+        // Start Fancybox on page load
+        Fancybox.fromNodes(Array.from(document.querySelectorAll('[data-fancybox="gallery"]')));
+      </script>
+</body>
